@@ -1,7 +1,13 @@
 /* ===== DATA ===== */
 const SKILLS = [
-  'Python', 'MySQL', 'Machine Learning',
-  'Scikit-learn', 'TensorFlow', 'AWS'
+  { name: 'Python', icon: 'devicon-python-plain colored' },
+  { name: 'MySQL', icon: 'devicon-mysql-plain colored' },
+  { name: 'Power BI', icon: 'devicon-microsoftsqlserver-plain colored' },
+  { name: 'Scikit-learn', icon: 'devicon-scikitlearn-plain colored' },
+  { name: 'TensorFlow', icon: 'devicon-tensorflow-original colored' },
+  { name: 'AWS', icon: 'devicon-amazonwebservices-plain-wordmark colored' },
+  { name: 'Git', icon: 'devicon-git-plain colored' },
+  { name: 'Docker', icon: 'devicon-docker-plain colored' }
 ];
 
 const PROJECTS = [
@@ -71,9 +77,14 @@ const sidebar        = $('sidebar');
 
 /* ===== RENDER SKILLS ===== */
 SKILLS.forEach(skill => {
-  const el = document.createElement('span');
-  el.className = 'skill-pill';
-  el.textContent = skill;
+  const el = document.createElement('div');
+  el.className = 'skill-card';
+
+  el.innerHTML = `
+    <i class="${skill.icon} skill-icon"></i>
+    <span>${skill.name}</span>
+  `;
+
   skillsGrid.appendChild(el);
 });
 
