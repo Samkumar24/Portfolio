@@ -95,9 +95,14 @@ PROJECTS.forEach((proj, i) => {
   card.dataset.index = i;
   card.id = `project-card-${proj.id}`;
   card.innerHTML = `
-    <span class="card-arrow">&#8599;</span>
-    <h3>${proj.title}</h3>
-    <p>${proj.short}</p>
+    <div class="card-thumb">
+      <img src="${proj.images[0]}" alt="${proj.title}" loading="lazy">
+    </div>
+    <div class="card-body">
+      <span class="card-arrow">&#8599;</span>
+      <h3>${proj.title}</h3>
+      <p>${proj.short}</p>
+    </div>
   `;
   card.addEventListener('click', () => openModal(i));
   projectsGrid.appendChild(card);
