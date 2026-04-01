@@ -2,13 +2,17 @@
 const SKILLS = [
   { name: 'Python', icon: 'devicon-python-plain colored' },
   { name: 'MySQL', icon: 'devicon-mysql-plain colored' },
-  { name: 'Power BI', icon: 'devicon-microsoftsqlserver-plain colored' },
+
+  // 🔥 FIXED POWER BI
+  { name: 'Power BI', icon: 'custom-powerbi' },
+
   { name: 'Scikit-learn', icon: 'devicon-scikitlearn-plain colored' },
   { name: 'TensorFlow', icon: 'devicon-tensorflow-original colored' },
   { name: 'AWS', icon: 'devicon-amazonwebservices-plain-wordmark colored' },
   { name: 'Git', icon: 'devicon-git-plain colored' },
   { name: 'Docker', icon: 'devicon-docker-plain colored' }
 ];
+
 
 const PROJECTS = [
   {
@@ -80,10 +84,17 @@ SKILLS.forEach(skill => {
   const el = document.createElement('div');
   el.className = 'skill-card';
 
-  el.innerHTML = `
-    <i class="${skill.icon} skill-icon"></i>
-    <span>${skill.name}</span>
-  `;
+  if (skill.icon === 'custom-powerbi') {
+    el.innerHTML = `
+      <img src=""https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg"" class="skill-icon">
+      <span>${skill.name}</span>
+    `;
+  } else {
+    el.innerHTML = `
+      <i class="${skill.icon} skill-icon"></i>
+      <span>${skill.name}</span>
+    `;
+  }
 
   skillsGrid.appendChild(el);
 });
@@ -229,3 +240,7 @@ document.querySelectorAll('.section').forEach(sec => {
   sec.classList.add('fade-in');
   observer.observe(sec);
 });
+
+window.onload = () => {
+  lucide.createIcons();
+};
