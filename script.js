@@ -1,8 +1,18 @@
 /* ===== DATA ===== */
 const SKILLS = [
-  'Python', 'MySQL', 'Machine Learning',
-  'Scikit-learn', 'TensorFlow', 'AWS'
+  { name: 'Python', icon: 'devicon-python-plain colored' },
+  { name: 'MySQL', icon: 'devicon-mysql-plain colored' },
+
+  // 🔥 FIXED POWER BI
+  { name: 'Power BI', icon: 'custom-powerbi' },
+
+  { name: 'Scikit-learn', icon: 'devicon-scikitlearn-plain colored' },
+  { name: 'TensorFlow', icon: 'devicon-tensorflow-original colored' },
+  { name: 'AWS', icon: 'devicon-amazonwebservices-plain-wordmark colored' },
+  { name: 'Git', icon: 'devicon-git-plain colored' },
+  { name: 'Docker', icon: 'devicon-docker-plain colored' }
 ];
+
 
 const PROJECTS = [
   {
@@ -71,9 +81,21 @@ const sidebar        = $('sidebar');
 
 /* ===== RENDER SKILLS ===== */
 SKILLS.forEach(skill => {
-  const el = document.createElement('span');
-  el.className = 'skill-pill';
-  el.textContent = skill;
+  const el = document.createElement('div');
+  el.className = 'skill-card';
+
+  if (skill.icon === 'custom-powerbi') {
+    el.innerHTML = `
+      <img src=""https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg"" class="skill-icon">
+      <span>${skill.name}</span>
+    `;
+  } else {
+    el.innerHTML = `
+      <i class="${skill.icon} skill-icon"></i>
+      <span>${skill.name}</span>
+    `;
+  }
+
   skillsGrid.appendChild(el);
 });
 
@@ -84,9 +106,14 @@ PROJECTS.forEach((proj, i) => {
   card.dataset.index = i;
   card.id = `project-card-${proj.id}`;
   card.innerHTML = `
-    <span class="card-arrow">&#8599;</span>
-    <h3>${proj.title}</h3>
-    <p>${proj.short}</p>
+    <div class="card-thumb">
+      <img src="${proj.images[0]}" alt="${proj.title}" loading="lazy">
+    </div>
+    <div class="card-body">
+      <span class="card-arrow">&#8599;</span>
+      <h3>${proj.title}</h3>
+      <p>${proj.short}</p>
+    </div>
   `;
   card.addEventListener('click', () => openModal(i));
   projectsGrid.appendChild(card);
@@ -213,3 +240,7 @@ document.querySelectorAll('.section').forEach(sec => {
   sec.classList.add('fade-in');
   observer.observe(sec);
 });
+
+window.onload = () => {
+  lucide.createIcons();
+};
