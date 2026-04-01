@@ -612,23 +612,27 @@ body {
 }
 
 .btn-github {
-  display: inline-flex;
+  display: flex;
+  justify-content: center;
   align-items: center;
   gap: 8px;
-  padding: 10px 20px;
-  background: var(--accent);
-  color: #fff;
+
+  margin: 24px auto 0;
+  width: fit-content;
+
+  background: var(--accent);      /* 🔥 orange background */
+  color: #fff;                    /* white text */
+  padding: 12px 20px;
+  border-radius: 10px;
   text-decoration: none;
-  border-radius: 999px;
-  font-size: .85rem;
-  font-weight: 600;
-  transition: var(--transition);
+
+  transition: 0.3s;
 }
 
+/* Hover */
 .btn-github:hover {
   background: var(--accent-hover);
   transform: translateY(-2px);
-  box-shadow: 0 4px 16px rgba(255,140,66,.4);
 }
 
 /* ===== SLIDESHOW ===== */
@@ -1010,7 +1014,7 @@ body {
 /* ===== MINIMAL RIGHT NAV ===== */
 .right-nav {
   position: fixed;
-  right: 8px;   /* 🔥 push to extreme right */
+  right: 8px;   /*  push to extreme right */
   top: 50%;
   transform: translateY(-50%);
   display: flex;
@@ -1028,8 +1032,8 @@ body {
   justify-content: center;
 
   color: var(--accent);
-  background: transparent;   /* ❌ no box */
-  border: none;              /* ❌ no border */
+  background: transparent;   
+  border: none;              
 
   transition: 0.3s ease;
 }
@@ -1050,4 +1054,58 @@ body {
 .right-nav a.active {
   color: var(--accent);
   transform: scale(1.3);
+}
+
+/* ===== PROJECT GITHUB LINK (MATCH LINKEDIN STYLE) ===== */
+.project-github {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.project-github a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--accent);   /* 🔥 orange */
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+/* Hover */
+.project-github a:hover {
+  color: var(--accent-hover);
+  transform: translateX(4px);
+}
+
+/* Icon color */
+.project-github svg {
+  color: var(--accent);
+}
+
+/* ===== LINKEDIN LINK (MATCH STYLE) ===== */
+.cert-linkedin {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.cert-linkedin a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--accent);   /* 🔥 same orange */
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+/* Hover */
+.cert-linkedin a:hover {
+  color: var(--accent-hover);
+  transform: translateX(4px);
+}
+
+/* Icon color */
+.cert-linkedin svg {
+  color: var(--accent);
 }
