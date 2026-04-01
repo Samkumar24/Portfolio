@@ -23,10 +23,10 @@ const PROJECTS = [
     tech: ['Python', 'Scikit-learn', 'TensorFlow', 'AWS', 'MLOps', 'CI/CD', 'GitHub Actions'],
     github: 'https://github.com/Samkumar24/End-to-End-Fashion-Recommendation-System-with-MLOps',
     images: [
-      'https://i.ibb.co/8DTm8dXN/Untitled-Diagram-drawio-1.png',
-      'https://i.ibb.co/qM3TWtQ5/P3-3.png',
-      'https://i.ibb.co/HpT6myX3/P3-1.png',
-      'https://i.ibb.co/8DgWK75t/P3-2.png'
+      'https://raw.githubusercontent.com/Samkumar24/Portfolio/62ffc6616f209a666cb80aae658b1dd11a00b6c7/Images/Project1%20mlops/P3%200.png',
+      'https://raw.githubusercontent.com/Samkumar24/Portfolio/62ffc6616f209a666cb80aae658b1dd11a00b6c7/Images/Project1%20mlops/P3%203.png',
+      'https://raw.githubusercontent.com/Samkumar24/Portfolio/62ffc6616f209a666cb80aae658b1dd11a00b6c7/Images/Project1%20mlops/P3%202.png',
+      'https://raw.githubusercontent.com/Samkumar24/Portfolio/62ffc6616f209a666cb80aae658b1dd11a00b6c7/Images/Project1%20mlops/P3%201.png'
     ]
   },
   {
@@ -37,10 +37,10 @@ const PROJECTS = [
     tech: ['SQL', 'Python', 'Power BI', 'Data Analytics'],
     github: 'https://github.com/Samkumar24/-Operational-Performance-Analysis-Code-Basics',
     images: [
-      'https://i.ibb.co/3YNHMwKK/Goodcab-P1.png',
-      'https://i.ibb.co/TBNn0Xt8/Goodcab-P2.png',
-      'https://i.ibb.co/pBFdGpHg/Goodcab-P3.png',
-      'https://i.ibb.co/3YrPhHxf/Goodcab-P4.png'
+      'https://raw.githubusercontent.com/Samkumar24/Portfolio/62ffc6616f209a666cb80aae658b1dd11a00b6c7/Images/Project2%20goodcabs/Goodcab%20P1.png',
+      'https://raw.githubusercontent.com/Samkumar24/Portfolio/62ffc6616f209a666cb80aae658b1dd11a00b6c7/Images/Project2%20goodcabs/Goodcab%20P2.png',
+      'https://raw.githubusercontent.com/Samkumar24/Portfolio/62ffc6616f209a666cb80aae658b1dd11a00b6c7/Images/Project2%20goodcabs/Goodcab%20P3.png',
+      'https://raw.githubusercontent.com/Samkumar24/Portfolio/62ffc6616f209a666cb80aae658b1dd11a00b6c7/Images/Project2%20goodcabs/Goodcab%20P4.png'
     ]
   },
   {
@@ -51,12 +51,12 @@ const PROJECTS = [
     tech: ['Python', 'Pandas', 'NumPy', 'Data Visualization', 'Market Analysis'],
     github: 'https://github.com/Samkumar24/Market-Fit-Research-for-Air-Purifier-Development-Using-AQI-Analytics',
     images: [
-      'https://i.ibb.co/9k29Qvmg/Air-p1.png',
-      'https://i.ibb.co/7DDt28M/Air-p2.png',
-      'https://i.ibb.co/gLVsC29p/Air-3.png',
-      'https://i.ibb.co/hxhtBh8Q/Air-4.png',
-      'https://i.ibb.co/ZpqFZj0F/Air-5.png',
-      'https://i.ibb.co/7NvMBnZ6/Air-6.png'
+      'https://raw.githubusercontent.com/Samkumar24/Portfolio/main/Images/Project3%20aqi/Air%201.png',
+      'https://raw.githubusercontent.com/Samkumar24/Portfolio/main/Images/Project3%20aqi/Air%202.png',
+      'https://raw.githubusercontent.com/Samkumar24/Portfolio/main/Images/Project3%20aqi/Air%203.png',
+      'https://raw.githubusercontent.com/Samkumar24/Portfolio/main/Images/Project3%20aqi/Air%204.png',
+      'https://raw.githubusercontent.com/Samkumar24/Portfolio/main/Images/Project3%20aqi/Air%205.png',
+      'https://raw.githubusercontent.com/Samkumar24/Portfolio/main/Images/Project3%20aqi/Air%206.png'
     ]
   }
 ];
