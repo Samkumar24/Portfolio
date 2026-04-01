@@ -473,7 +473,7 @@ body {
 .modal-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,.75);
+  background: rgba(0,0,0,.55);
   backdrop-filter: blur(6px);
   z-index: 1000;
   display: flex;
@@ -510,14 +510,14 @@ body {
 
 .modal-close {
   position: absolute;
-  top: 14px;
-  right: 18px;
+  top: 12px;
+  right: 16px;
   width: 36px;
   height: 36px;
   background: rgba(255,255,255,.1);
   border: none;
   border-radius: 50%;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   color: #ffffff;
   cursor: pointer;
   z-index: 10;
@@ -534,9 +534,8 @@ body {
 
 /* ===== MODAL INNER LAYOUT ===== */
 .modal-inner {
-  display: grid;
-  grid-template-columns: 1fr 1.3fr;
-  min-height: 500px;
+  display: flex;
+  flex-direction: column;
 }
 
 .modal-info {
@@ -642,9 +641,7 @@ body {
 .slideshow {
   position: relative;
   width: 100%;
-  height: 100%;
-  min-height: 500px;
-  overflow: hidden;
+  height: 330px;   
 }
 
 .slideshow-track {
@@ -962,13 +959,16 @@ body {
   .hero-greeting { font-size: 1.5rem; }
   .projects-grid { grid-template-columns: 1fr; }
 
-  .modal-inner { grid-template-columns: 1fr; }
+  .modal-inner {
+  display: flex;
+  flex-direction: column;
+}
 
   .modal-slideshow {
+    width: 100%;
+    height: 320px;
     border-radius: 16px 16px 0 0;
-    min-height: 260px;
-    order: -1;
-  }
+}
 
   .slideshow { min-height: 260px; }
 
